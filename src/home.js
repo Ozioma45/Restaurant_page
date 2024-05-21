@@ -3,15 +3,23 @@ export default function loadHome() {
   content.innerHTML = "";
 
   const homeDiv = document.createElement("div");
-  const headline = document.createElement("h1");
-  headline.textContent = "Welcome to Our Restaurant";
+  homeDiv.classList.add("main");
+
+  const heroText = document.createElement("div");
+  heroText.classList.add("hero-text");
+
+  const headline = document.createElement("h2");
+  headline.textContent = "Meet, Eat and Enjoy True Taste";
+
+  const imgCont = document.createElement("div");
+  imgCont.classList.add("hero-image");
+
   const image = document.createElement("img");
   image.src = "../src/pnge.png";
-  const description = document.createElement("p");
-  description.textContent = "Best food in town. Come and enjoy!";
 
-  homeDiv.appendChild(headline);
-  homeDiv.appendChild(image);
-  homeDiv.appendChild(description);
+  homeDiv.appendChild(heroText);
+  heroText.appendChild(headline);
+  homeDiv.appendChild(imgCont);
+  imgCont.appendChild(image);
   content.appendChild(homeDiv);
 }
